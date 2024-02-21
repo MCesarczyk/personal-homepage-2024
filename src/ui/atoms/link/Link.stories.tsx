@@ -10,9 +10,6 @@ const meta: Meta<typeof Link> = {
   argTypes: {
     children: { control: 'text', description: 'Link text' },
     onClick: { action: 'clicked', description: 'Click event' },
-    theme: { table: { disable: true } },
-    as: { table: { disable: true } },
-    forwardedAs: { table: { disable: true } },
   }
 };
 export default meta;
