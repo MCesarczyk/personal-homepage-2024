@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import { imageLoader } from "./loader";
@@ -29,7 +29,7 @@ export const Tile = ({ title, images, description, links }: TileProps) => (
       {title}
     </h3>
     {images.map((image) => (
-      <div className="w-full aspect-square flex items-center">
+      <div key={image.id} className="w-full aspect-square flex items-center">
         <Image
           width={300}
           height={300}

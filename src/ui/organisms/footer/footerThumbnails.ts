@@ -9,7 +9,7 @@ import {
     // CODEPEN_ADDRESS,
     // FACEBOOK_ADDRESS,
     // INSTAGRAM_ADDRESS,
-} from "@repo/assets";
+} from "@/assets";
 
 export const footerThumbnails = [
     {
