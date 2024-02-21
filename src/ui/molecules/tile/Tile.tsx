@@ -29,12 +29,12 @@ export const Tile = ({ title, images, description, links }: TileProps) => (
       {title}
     </h3>
     {images.map((image) => (
-      <div key={image.id} className="w-full aspect-square flex items-center">
+      <div key={image.id} className="w-full aspect-video flex items-center">
         <Image
           width={300}
-          height={300}
+          height={200}
           key={image.id}
-          className="my-4 w-full h-auto rounded"
+          className="my-4 w-auto h-5/6 rounded mx-auto"
           loader={imageLoader}
           src={image.url}
           alt={image.alt}
