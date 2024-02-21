@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "commit": "cz",
+    "release": "standard-version",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -36,6 +38,7 @@
     "eslint-config-next": "14.1.0",
     "eslint-plugin-storybook": "^0.8.0",
     "postcss": "^8",
+    "standard-version": "^9.5.0",
     "storybook": "^7.6.17",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
