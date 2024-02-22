@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next lint --fix",
     "format": "npx prettier --write .",
+    "check:circular": "madge --circular --extensions ts,tsx ./src",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "eval $(grep '^CHROMATIC_PROJECT_TOKEN' .env.development.local) && chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
@@ -46,6 +47,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "madge": "^6.1.0",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "pretty-quick": "^4.0.0",
