@@ -1,8 +1,8 @@
-import { ComponentProps } from 'react';
+import { type ComponentProps } from 'react';
 import type { Meta, StoryFn } from '@storybook/react';
 
-import { Container } from '../../atoms/Container';
 import { Tile } from './Tile';
+import { Container } from '../../atoms/Container';
 
 const meta: Meta<typeof Tile> = {
   component: Tile,

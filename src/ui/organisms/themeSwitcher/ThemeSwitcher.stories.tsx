@@ -1,8 +1,8 @@
 import type { Meta, StoryFn } from '@storybook/react';
-import { ComponentProps, useEffect, useState } from 'react';
+import { type ComponentProps, useEffect, useState } from 'react';
 
-import { ThemeSwitcher } from './ThemeSwitcher';
 import clsx from 'clsx';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 const meta: Meta<typeof ThemeSwitcher> = {
   component: ThemeSwitcher,

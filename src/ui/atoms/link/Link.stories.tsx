@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react';
-import { ComponentProps } from 'react';
+import { type ComponentProps } from 'react';
 
 import { Link } from './Link';
 

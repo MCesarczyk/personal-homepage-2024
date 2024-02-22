@@ -22,17 +22,17 @@ export const skills = [
     "GraphQL",
     "Docker",
     "Git/gh-pages",
-]
+];
 
 export const learning = [
     "Next.js 14",
     "NX monorepo",
     "Nest.js",
-]
+];
 
 export const goals = [
     "Remix",
     "Svelte",
     "Rust",
-]
+];
 

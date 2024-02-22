@@ -1,4 +1,4 @@
-import { ComponentProps, ReactNode } from 'react';
+import { type ComponentProps, type ReactNode } from 'react';
 
 interface LinkProps {
   children: ReactNode;

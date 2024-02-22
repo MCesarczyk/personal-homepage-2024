@@ -1,9 +1,9 @@
-import { ComponentProps } from 'react';
-import { Container } from '../../utils/Container';
+import { type ComponentProps } from 'react';
 
 import type { Meta, StoryFn } from '@storybook/react';
 
 import { ErrorMessage } from './ErrorMessage';
+import { Container } from '../../utils/Container';
 
 const meta: Meta<typeof ErrorMessage> = {
   component: ErrorMessage,

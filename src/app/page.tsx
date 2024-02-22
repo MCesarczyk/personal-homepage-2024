@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   Header,
   Section,
@@ -18,7 +19,6 @@ import {
   sampleRepositories,
   portrait,
 } from '@/assets';
-import Image from 'next/image';
 import { NextThemeSwitcher } from './NextThemeSwitcher';
 
 export default async function Index() {

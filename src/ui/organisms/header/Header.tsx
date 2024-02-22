@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { type ReactNode } from 'react';
 
 // import photo from './portrait.webp';
 import { EnvelopeIcon } from './EnvelopeIcon';
