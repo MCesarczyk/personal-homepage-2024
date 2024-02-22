@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "postinstall": "husky install",
     "commit": "cz",
     "release": "standard-version",
     "dev": "next dev",
@@ -47,6 +48,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.8.0",
+    "husky": "^9.0.11",
     "madge": "^6.1.0",
     "postcss": "^8",
     "prettier": "^3.2.5",
