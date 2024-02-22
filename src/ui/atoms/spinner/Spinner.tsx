@@ -1,4 +1,4 @@
-import { LoaderCircle } from './LoaderCircle';
+import { LoaderCircle } from "./LoaderCircle";
 
 interface SpinnerProps {
   message: string;

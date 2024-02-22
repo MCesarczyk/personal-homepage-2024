@@ -18,13 +18,9 @@ export const Gallery = ({ title, subtitle, status, repos }: GalleryProps) => {
           <GitHubLogo />
         </div>
       </div>
-      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black m-0">
-        {title}
-      </h2>
+      <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black m-0">{title}</h2>
       <p className="text-base sm:text-xl mb-4">{subtitle}</p>
-      {status === "loading" && (
-        <Spinner message="Repositories are loading... " />
-      )}
+      {status === "loading" && <Spinner message="Repositories are loading... " />}
       {status === "error" && (
         <ErrorMessage
           address="lorem.ipsum@mail.co"

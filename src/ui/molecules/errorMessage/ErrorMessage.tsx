@@ -1,5 +1,5 @@
-import { WarningSign } from './WarningSign';
-import { Link } from '../../atoms';
+import { WarningSign } from "./WarningSign";
+import { Link } from "../../atoms";
 
 interface ErrorMessageProps {
   errorMessage: string;
@@ -7,11 +7,7 @@ interface ErrorMessageProps {
   address: string;
 }
 
-export const ErrorMessage = ({
-  errorMessage,
-  errorDescription,
-  address,
-}: ErrorMessageProps) => (
+export const ErrorMessage = ({ errorMessage, errorDescription, address }: ErrorMessageProps) => (
   <>
     <div className="mt-24 mb-6">
       <WarningSign />

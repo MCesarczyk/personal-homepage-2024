@@ -25,9 +25,7 @@ interface TileProps {
 
 export const Tile = ({ title, images, description, links }: TileProps) => (
   <div className="text-left text-sm p-6 sm:p-10 md:text-base md:p-12 lg:p-14 rounded bg-white dark:bg-gray-800 border-4 border-gray-500 border-opacity-10 dark:border-opacity-10 shadow-lg shadow-gray-900 transition-all ease-in duration-300 hover:shadow-blue-500">
-    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-blue-800 dark:text-blue-600">
-      {title}
-    </h3>
+    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-blue-800 dark:text-blue-600">{title}</h3>
     {images.map((image) => (
       <div key={image.id} className="w-full aspect-video flex items-center">
         <Image
@@ -46,12 +44,7 @@ export const Tile = ({ title, images, description, links }: TileProps) => (
       {links.map((link) => (
         <li key={link.id}>
           {link.prefix}
-          <a
-            className="text-blue-700"
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="text-blue-700" href={link.url} target="_blank" rel="noopener noreferrer">
             {link.label}
           </a>
         </li>

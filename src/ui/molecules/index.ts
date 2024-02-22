@@ -1,2 +1,2 @@
-export * from './errorMessage';
-export * from './tile';
+export * from "./errorMessage";
+export * from "./tile";

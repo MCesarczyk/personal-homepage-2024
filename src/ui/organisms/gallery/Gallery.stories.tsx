@@ -27,9 +27,7 @@ const Template: StoryFn<ComponentProps<typeof Gallery>> = (args) => (
   </div>
 );
 
-export const _Gallery: StoryFn<ComponentProps<typeof Gallery>> = Template.bind(
-  {}
-);
+export const _Gallery: StoryFn<ComponentProps<typeof Gallery>> = Template.bind({});
 _Gallery.args = {
   title: "Title",
   subtitle: "Subtitle",

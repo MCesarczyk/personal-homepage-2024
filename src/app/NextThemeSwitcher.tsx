@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { ThemeSwitcher } from '@/ui';
+import { ThemeSwitcher } from "@/ui";
 // import { Theme } from '@types';
 // import { localStorageService } from '@services';
 
@@ -17,9 +17,7 @@ export const NextThemeSwitcher = () => {
   };
 
   useEffect(() => {
-    isDarkTheme
-      ? document.documentElement.classList.add('dark')
-      : document.documentElement.classList.remove('dark');
+    isDarkTheme ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
   }, [isDarkTheme]);
 
   return <ThemeSwitcher {...{ isDarkTheme, toggleDarkTheme: onThemeChange }} />;
