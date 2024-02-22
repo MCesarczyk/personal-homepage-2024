@@ -14,7 +14,8 @@
     "check:circular": "madge --circular --extensions ts,tsx ./src",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "eval $(grep '^CHROMATIC_PROJECT_TOKEN' .env.development.local) && chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
+    "chromatic": "eval $(grep '^CHROMATIC_PROJECT_TOKEN' .env.development.local) && chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
+    "prepare": "husky"
   },
   "dependencies": {
     "clsx": "^2.1.0",
