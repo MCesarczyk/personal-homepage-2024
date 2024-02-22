@@ -97,6 +97,12 @@ devDependencies:
   postcss:
     specifier: ^8
     version: 8.4.35
+  prettier:
+    specifier: ^3.2.5
+    version: 3.2.5
+  pretty-quick:
+    specifier: ^4.0.0
+    version: 4.0.0(prettier@3.2.5)
   standard-version:
     specifier: ^9.5.0
     version: 9.5.0
@@ -9601,6 +9607,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /mri@1.2.0:
+    resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
+    engines: {node: '>=4'}
+    dev: true
+
   /ms@2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
     dev: true
@@ -10248,6 +10259,11 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /picomatch@3.0.1:
+    resolution: {integrity: sha512-I3EurrIQMlRc9IaAZnqRR044Phh2DXY+55o7uJ0V+hYZAcQYSuFWsc9q5PvyDHUSCe1Qxn/iBz+78s86zWnGag==}
+    engines: {node: '>=10'}
+    dev: true
+
   /pify@2.3.0:
     resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
@@ -10482,6 +10498,12 @@ packages:
     hasBin: true
     dev: true
 
+  /prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
+
   /pretty-error@4.0.0:
     resolution: {integrity: sha512-AoJ5YMAcXKYxKhuJGdcvse+Voc6v1RgnsR3nWcYU7q4t6z0Q6T86sv5Zq8VIRbOWWFpvdGE83LtdSMNd+6Y0xw==}
     dependencies:
@@ -10510,6 +10532,23 @@ packages:
   /pretty-hrtime@1.0.3:
     resolution: {integrity: sha512-66hKPCr+72mlfiSjlEB1+45IjXSqvVAIy6mocupoww4tBFE9R9IhwwUGoI4G++Tc9Aq+2rxOt0RFU6gPcrte0A==}
     engines: {node: '>= 0.8'}
+    dev: true
+
+  /pretty-quick@4.0.0(prettier@3.2.5):
+    resolution: {integrity: sha512-M+2MmeufXb/M7Xw3Afh1gxcYpj+sK0AxEfnfF958ktFeAyi5MsKY5brymVURQLgPLV1QaF5P4pb2oFJ54H3yzQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+    peerDependencies:
+      prettier: ^3.0.0
+    dependencies:
+      execa: 5.1.1
+      find-up: 5.0.0
+      ignore: 5.3.1
+      mri: 1.2.0
+      picocolors: 1.0.0
+      picomatch: 3.0.1
+      prettier: 3.2.5
+      tslib: 2.6.2
     dev: true
 
   /process-nextick-args@2.0.1:
