@@ -1,2 +1,2 @@
-console.log('running linter...');
+console.log("running linter...");
 process.exit(0);
