@@ -1,2 +1,2 @@
-export * from './Footer';
-export * from './footerThumbnails';
+export * from "./Footer";
+export * from "./footerThumbnails";

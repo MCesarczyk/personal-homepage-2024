@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 interface LoaderProps {
   src: string;
@@ -7,5 +7,5 @@ interface LoaderProps {
 }
 
 export const imageLoader = ({ src, width, quality }: LoaderProps) => {
-  return `${src}?w=${width}&q=${quality || 75}`
-}
+  return `${src}?w=${width}&q=${quality || 75}`;
+};

@@ -1,11 +1,5 @@
-import {
-  Header,
-  Section,
-  Footer,
-  Thumbnail,
-  footerThumbnails,
-  Gallery,
-} from '@/ui';
+import Image from "next/image";
+import { Header, Section, Footer, Thumbnail, footerThumbnails, Gallery } from "@/ui";
 
 import {
   ADDRESS,
@@ -17,9 +11,8 @@ import {
   goals,
   sampleRepositories,
   portrait,
-} from '@/assets';
-import Image from 'next/image';
-import { NextThemeSwitcher } from './NextThemeSwitcher';
+} from "@/assets";
+import { NextThemeSwitcher } from "./NextThemeSwitcher";
 
 export default async function Index() {
   return (
@@ -28,17 +21,15 @@ export default async function Index() {
       <Header
         name={AUTHOR_NAME}
         description={AUTHOR_DESCRIPTION}
-        Portrait={
-          <Image src={portrait} alt="portrait" width={384} height={512} />
-        }
+        Portrait={<Image src={portrait} alt="portrait" width={384} height={512} />}
       />
-      <Section title={'My skills'} elements={skills} />
-      <Section title={'Things I\'m learning right now'} elements={learning} />
-      <Section title={'My next goals'} elements={goals} />
+      <Section title={"My skills"} elements={skills} />
+      <Section title={"Things I'm learning right now"} elements={learning} />
+      <Section title={"My next goals"} elements={goals} />
       <Gallery
-        title={'Portfolio'}
-        subtitle={'My recent projects'}
-        status={'success'}
+        title={"Portfolio"}
+        subtitle={"My recent projects"}
+        status={"success"}
         repos={sampleRepositories.map((repo) => ({
           id: repo.id,
           name: repo.title,

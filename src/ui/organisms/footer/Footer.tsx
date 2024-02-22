@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { type ReactNode } from "react";
 
-import { Caption } from '../../atoms';
+import { Caption } from "../../atoms";
 
 interface FooterProps {
   address: string;
