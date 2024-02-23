@@ -2,6 +2,7 @@ import { type ComponentProps } from "react";
 import type { Meta, StoryFn } from "@storybook/react";
 
 import { Tile } from "./Tile";
+import sample from "./sample.avif";
 import { Container } from "../../atoms/Container";
 
 const meta: Meta<typeof Tile> = {
@@ -28,7 +29,7 @@ _Tile.args = {
   images: [
     {
       id: 1,
-      url: "https://via.placeholder.com/150",
+      url: sample,
       alt: "Placeholder image",
     },
   ],
