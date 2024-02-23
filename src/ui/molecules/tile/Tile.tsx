@@ -6,7 +6,7 @@ import { imageLoader } from "./loader";
 interface TileImage {
   id: number;
   alt: string;
-  url: StaticImageData;
+  url: StaticImageData | string;
 }
 
 interface TileUrl {
