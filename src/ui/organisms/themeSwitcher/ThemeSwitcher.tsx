@@ -11,7 +11,7 @@ export const ThemeSwitcher = ({ isDarkTheme, toggleDarkTheme }: ThemeSwitcherPro
   return (
     <div className="flex justify-end relative z-10">
       <button
-        className="flex items-center justify-end gap-3 text-xs h-6 p-0 border-none bg-transparent"
+        className="flex items-center justify-end gap-3 text-xs h-6 p-0 border-none bg-transparent -translate-y-6"
         onClick={toggleDarkTheme}
       >
         <span className="hidden sm:block">{`${isDarkTheme ? "DARK" : "LIGHT"}`}&nbsp;MODE&nbsp;ON</span>

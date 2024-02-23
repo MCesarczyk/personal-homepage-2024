@@ -1,7 +1,9 @@
+import { type StaticImageData } from "next/image";
+
 interface Picture {
   id: number;
   alt: string;
-  url: string;
+  url: StaticImageData | string;
 }
 
 export interface Repo {

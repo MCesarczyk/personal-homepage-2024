@@ -1,3 +1,5 @@
+import { screen_1, screen_2, screen_3, screen_4 } from "@/assets";
+
 export const sampleRepositories = [
   {
     id: 1,
@@ -9,7 +11,7 @@ export const sampleRepositories = [
       {
         id: 1,
         alt: "CNC Calc React Screenshot",
-        url: "https://i.ibb.co/ZXkZjv9/screen-1.png",
+        url: screen_1,
       },
     ],
   },
@@ -23,7 +25,7 @@ export const sampleRepositories = [
       {
         id: 1,
         alt: "Movie Browser Screenshot",
-        url: "https://i.ibb.co/h2jsSXF/screen-2.png",
+        url: screen_2,
       },
     ],
   },
@@ -37,7 +39,7 @@ export const sampleRepositories = [
       {
         id: 1,
         alt: "Todo List Screenshot",
-        url: "https://i.ibb.co/y0jKbbx/screen-3.png",
+        url: screen_3,
       },
     ],
   },
@@ -51,24 +53,24 @@ export const sampleRepositories = [
       {
         id: 1,
         alt: "Route Assistant Screenshot",
-        url: "https://i.ibb.co/dcTnm2y/screen-4.png",
+        url: screen_4,
       },
     ],
   },
-  {
-    id: 5,
-    title: "Color Theme Generator",
-    description: "Ant Design color palette generator",
-    html_url: "https://mcesarczyk.github.io/color-theme-generator/",
-    homepage: "https://github.com/MCesarczyk/color-theme-generator",
-    images: [
-      {
-        id: 1,
-        alt: "Color Theme Generator Screenshot",
-        url: "https://i.ibb.co/pLp0gJ1/screen-5.png",
-      },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   title: "Color Theme Generator",
+  //   description: "Ant Design color palette generator",
+  //   html_url: "https://mcesarczyk.github.io/color-theme-generator/",
+  //   homepage: "https://github.com/MCesarczyk/color-theme-generator",
+  //   images: [
+  //     {
+  //       id: 1,
+  //       alt: "Color Theme Generator Screenshot",
+  //       url: screen_5,
+  //     },
+  //   ],
+  // },
   // {
   //   id: 6,
   //   title: "Rick & Morty",
