@@ -1,24 +1,52 @@
+# Personal homepage
+
+This is my private portfolio website. It is a Next.js project with TypeScript, Tailwind CSS, and Storybook.
+
+## Project uses:
+
+- Next.js 14.1.0
+- Node.js 20.11.1
+- Pnpm 8.15.1
+
+## Avilable targets:
+
+- run developmnent server
+
+### `pnpm dev`
+
+Application will be available at [http://localhost:3000](http://localhost:3000)
+
+- build project
+
+### `pnpm build`
+
+- preview built project
+
+### `pnpm start`
+
+- run storybook
+
+### `pnpm storybook`
+
+After running storybook, it will be available at [http://localhost:6006](http://localhost:6006)
+
+Moreover, deployed version of storybook is available in Chromatic service:
+https://www.chromatic.com/builds?appId=65d6460d027aed20a437099e
+
+or in Storybook format: https://65d6460d027aed20a437099e-nhxdtyarll.chromatic.com/?path=/docs/atoms-caption--docs
+
+Additionaly, there are some scripts for code formatting and linting.
+Linting is done with ESLint and Prettier, and formatting is done with Prettier.
+Before commiting, Husky will run linting and formatting scripts.
+Test build is also run before commiting.
+
+## Future plans
+
+- adding repositories interactively to list, store data on premise or using serverless function
+- dedicated subpages for every project
+- add CV available to download in pdf
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 
