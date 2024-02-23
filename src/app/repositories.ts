@@ -1,4 +1,4 @@
-import { screen_1, screen_2, screen_3, screen_4, screen_5 } from "@/assets";
+import { screen_1, screen_2, screen_3, screen_4 } from "@/assets";
 
 export const sampleRepositories = [
   {
@@ -57,20 +57,20 @@ export const sampleRepositories = [
       },
     ],
   },
-  {
-    id: 5,
-    title: "Color Theme Generator",
-    description: "Ant Design color palette generator",
-    html_url: "https://mcesarczyk.github.io/color-theme-generator/",
-    homepage: "https://github.com/MCesarczyk/color-theme-generator",
-    images: [
-      {
-        id: 1,
-        alt: "Color Theme Generator Screenshot",
-        url: screen_5,
-      },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   title: "Color Theme Generator",
+  //   description: "Ant Design color palette generator",
+  //   html_url: "https://mcesarczyk.github.io/color-theme-generator/",
+  //   homepage: "https://github.com/MCesarczyk/color-theme-generator",
+  //   images: [
+  //     {
+  //       id: 1,
+  //       alt: "Color Theme Generator Screenshot",
+  //       url: screen_5,
+  //     },
+  //   ],
+  // },
   // {
   //   id: 6,
   //   title: "Rick & Morty",
