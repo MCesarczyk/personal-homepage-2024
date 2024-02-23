@@ -7,7 +7,7 @@ import { NextThemeSwitcher } from "./NextThemeSwitcher";
 
 export default async function Index() {
   return (
-    <div className="h-full py-12 px-6 max-w-5xl my-0 mx-auto bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <div className="h-full py-12 px-2 md:px-4 max-w-5xl my-0 mx-auto bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
       <NextThemeSwitcher />
       <Header
         name={AUTHOR_NAME}
