@@ -1,17 +1,8 @@
 import Image from "next/image";
 import { Header, Section, Footer, Thumbnail, footerThumbnails, Gallery } from "@/ui";
 
-import {
-  ADDRESS,
-  AUTHOR_DESCRIPTION,
-  AUTHOR_NAME,
-  FOOTER_NOTE,
-  skills,
-  learning,
-  goals,
-  sampleRepositories,
-  portrait,
-} from "@/assets";
+import { ADDRESS, AUTHOR_DESCRIPTION, AUTHOR_NAME, FOOTER_NOTE, skills, learning, goals, portrait } from "@/assets";
+import { sampleRepositories } from "@/app/repositories";
 import { NextThemeSwitcher } from "./NextThemeSwitcher";
 
 export default async function Index() {

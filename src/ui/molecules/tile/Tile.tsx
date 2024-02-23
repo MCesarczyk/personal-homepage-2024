@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { imageLoader } from "./loader";
 
 interface TileImage {
   id: number;
   alt: string;
-  url: string;
+  url: StaticImageData;
 }
 
 interface TileUrl {
