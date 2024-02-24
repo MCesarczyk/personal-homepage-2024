@@ -5,7 +5,7 @@ import { Caption } from "../../atoms";
 interface FooterProps {
   address: string;
   note: string;
-  children: ReactNode[];
+  children: ReactNode;
 }
 
 export const Footer = ({ address, children }: FooterProps) => (

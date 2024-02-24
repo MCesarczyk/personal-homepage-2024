@@ -3,6 +3,7 @@ import { Header, Section, Footer, Thumbnail, footerThumbnails, Gallery } from "@
 
 import { ADDRESS, AUTHOR_DESCRIPTION, AUTHOR_NAME, FOOTER_NOTE, skills, learning, goals, portrait } from "@/assets";
 import { sampleRepositories } from "@/app/repositories";
+import { ResumeDownloadButton } from "@/app/ResumeDownloadButton";
 import { NextThemeSwitcher } from "./NextThemeSwitcher";
 
 export default async function Index() {
@@ -31,9 +32,14 @@ export default async function Index() {
         }))}
       />
       <Footer note={FOOTER_NOTE} address={ADDRESS}>
-        {footerThumbnails.map((thumbnail) => (
-          <Thumbnail key={thumbnail.id} {...thumbnail} />
-        ))}
+        <div className="flex flex-col items-start">
+          <ResumeDownloadButton />
+          <div className="flex">
+            {footerThumbnails.map((thumbnail) => (
+              <Thumbnail key={thumbnail.id} {...thumbnail} />
+            ))}
+          </div>
+        </div>
       </Footer>
     </div>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import JSZipUtils from "jszip-utils";
 import saveAs from "save-as";
 
