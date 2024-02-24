@@ -19,15 +19,16 @@
   },
   "dependencies": {
     "clsx": "^2.1.0",
+    "jszip-utils": "^0.1.0",
     "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "save-as": "^0.1.8"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
-    "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.17",
     "@storybook/nextjs": "^7.6.17",
     "@storybook/react": "^7.6.17",
