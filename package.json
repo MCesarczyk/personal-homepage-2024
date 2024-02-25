@@ -6,9 +6,9 @@
     "postinstall": "husky install",
     "commit": "cz",
     "release": "standard-version",
-    "dev": "next dev",
+    "dev": "next dev -p 4000",
     "build": "next build",
-    "start": "next start",
+    "preview": "next start -p 4100",
     "lint": "next lint --fix",
     "format": "npx prettier --write .",
     "check:circular": "madge --circular --extensions ts,tsx ./src",
@@ -21,13 +21,13 @@
     "clsx": "^2.1.0",
     "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "save-file": "^2.3.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
-    "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.17",
     "@storybook/nextjs": "^7.6.17",
     "@storybook/react": "^7.6.17",

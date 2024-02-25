@@ -34,6 +34,7 @@ export const Tile = ({ title, images, description, links }: TileProps) => (
           key={image.id}
           className="w-full h-5/6 rounded object-contain"
           loader={imageLoader}
+          placeholder="blur"
           src={image.url}
           alt={image.alt}
         />
