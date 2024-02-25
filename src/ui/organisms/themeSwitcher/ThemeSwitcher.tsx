@@ -1,6 +1,7 @@
 import clsx from "clsx";
 
-import { SunIcon } from "./SunIcon";
+import { MoonIcon } from "../../../assets/icons/MoonIcon";
+import { SunIcon } from "../../../assets/icons/SunIcon";
 
 interface ThemeSwitcherProps {
   isDarkTheme: boolean;
@@ -18,7 +19,7 @@ export const ThemeSwitcher = ({ isDarkTheme, toggleDarkTheme }: ThemeSwitcherPro
         <div className="flex justify-start border-2 border-current rounded-2xl w-16 h-8">
           <div className={clsx("w-1/2 transition-all duration-300", isDarkTheme && "translate-x-8")}>
             <div className={clsx(isDarkTheme ? "text-white" : "text-gray-900")}>
-              <SunIcon />
+              {isDarkTheme ? <MoonIcon /> : <SunIcon />}
             </div>
           </div>
         </div>
