@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Header, Section, Footer, Thumbnail, footerThumbnails, Gallery } from "@/ui";
+import { Header, Section, Footer, Thumbnail, footerThumbnails, Gallery, DownloadButton } from "@/ui";
 
 import {
   ADDRESS,
@@ -13,7 +13,6 @@ import {
   ArrowUpIcon,
 } from "@/assets";
 import { sampleRepositories } from "@/app/repositories";
-import { ResumeDownloadButton } from "@/app/ResumeDownloadButton";
 import { NextThemeSwitcher } from "./NextThemeSwitcher";
 
 export default async function Index() {
@@ -47,7 +46,7 @@ export default async function Index() {
       <Footer note={FOOTER_NOTE} address={ADDRESS}>
         <div className="flex flex-col md:flex-row items-center">
           <div className="m-6 w-full md:w-auto shrink-0">
-            <ResumeDownloadButton />
+            <DownloadButton fileLocation="/CV-EN.pdf" fileName="Michał Cesarczyk CV.pdf" buttonText="Download CV" />
           </div>
           <div className="flex w-full">
             {footerThumbnails.map((thumbnail) => (

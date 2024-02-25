@@ -4,9 +4,6 @@ import type { Meta, StoryFn } from "@storybook/react";
 import { type ComponentProps } from "react";
 
 import { Button } from "./Button";
-import { saveFileFromUrlWithName } from "../../../common/utils";
-
-const handleClick = () => saveFileFromUrlWithName("/sample.pdf", "Blue sky pinting.pdf");
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -24,10 +21,4 @@ const Template: StoryFn<ComponentProps<typeof Button>> = (args) => <Button {...a
 export const _Button = Template.bind({});
 _Button.args = {
   children: "Button",
-};
-
-export const DownloadButton = Template.bind({});
-DownloadButton.args = {
-  children: "Download",
-  onClick: handleClick,
 };
