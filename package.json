@@ -19,11 +19,10 @@
   },
   "dependencies": {
     "clsx": "^2.1.0",
-    "jszip-utils": "^0.1.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "save-as": "^0.1.8"
+    "save-file": "^2.3.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.17",

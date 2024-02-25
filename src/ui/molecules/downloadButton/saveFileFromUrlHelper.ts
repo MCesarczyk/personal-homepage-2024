@@ -1,9 +1,9 @@
 "use client";
 
-import JSZipUtils from "jszip-utils";
-import saveAs from "save-as";
+import save from "save-file";
 
-export const saveFileFromUrl = async (url: string, name: string) => {
-  const buffer = await JSZipUtils.getBinaryContent(url);
-  return saveAs(new Blob([buffer]), name);
+export const saveFileFromUrl = async (url: string, filename: string) => {
+  const response = await fetch(url, { method: "GET" });
+  const blob = await response.blob();
+  return save(blob, filename);
 };
