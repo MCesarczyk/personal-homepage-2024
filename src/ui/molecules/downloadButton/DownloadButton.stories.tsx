@@ -7,7 +7,7 @@ import { DownloadButton } from "./DownloadButton";
 
 const meta: Meta<typeof DownloadButton> = {
   component: DownloadButton,
-  title: "Atoms/DownloadButton",
+  title: "Molecules/DownloadButton",
   tags: ["autodocs"],
   argTypes: {
     fileLocation: { control: "text", description: "File location" },
