@@ -1,14 +1,27 @@
 import Image from "next/image";
 import { Header, Section, Footer, Thumbnail, footerThumbnails, Gallery } from "@/ui";
 
-import { ADDRESS, AUTHOR_DESCRIPTION, AUTHOR_NAME, FOOTER_NOTE, skills, learning, goals, portrait } from "@/assets";
+import {
+  ADDRESS,
+  AUTHOR_DESCRIPTION,
+  AUTHOR_NAME,
+  FOOTER_NOTE,
+  skills,
+  learning,
+  goals,
+  portrait,
+  ArrowUpIcon,
+} from "@/assets";
 import { sampleRepositories } from "@/app/repositories";
 import { ResumeDownloadButton } from "@/app/ResumeDownloadButton";
 import { NextThemeSwitcher } from "./NextThemeSwitcher";
 
 export default async function Index() {
   return (
-    <div className="h-full py-12 px-2 md:px-4 max-w-5xl my-0 mx-auto bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+    <div
+      id="home"
+      className="h-full py-12 px-2 md:px-4 max-w-5xl my-0 mx-auto bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100"
+    >
       <NextThemeSwitcher />
       <Header
         name={AUTHOR_NAME}
@@ -32,12 +45,17 @@ export default async function Index() {
         }))}
       />
       <Footer note={FOOTER_NOTE} address={ADDRESS}>
-        <div className="flex flex-col items-start">
-          <ResumeDownloadButton />
-          <div className="flex">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="m-6 w-full md:w-auto shrink-0">
+            <ResumeDownloadButton />
+          </div>
+          <div className="flex w-full">
             {footerThumbnails.map((thumbnail) => (
               <Thumbnail key={thumbnail.id} {...thumbnail} />
             ))}
+            <div className="ml-auto">
+              <Thumbnail id={999} icon={ArrowUpIcon} url="#home" local />
+            </div>
           </div>
         </div>
       </Footer>

@@ -14,4 +14,5 @@ export { CodepenThumbnail } from "./CodepenThumbnail";
 export { FacebookThumbnail } from "./FacebookThumbnail";
 export { InstagramThumbnail } from "./InstagramThumbnail";
 export { DownloadIcon } from "./DownloadIcon";
+export { ArrowUpIcon } from "./ArrowUpIcon";
 export { SunIcon } from "./SunIcon";

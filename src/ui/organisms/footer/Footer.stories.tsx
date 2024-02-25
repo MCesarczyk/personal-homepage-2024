@@ -29,6 +29,6 @@ _Footer.args = {
 };
 _Footer.parameters = {
   backgrounds: {
-    default: "dark",
+    default: "light",
   },
 };

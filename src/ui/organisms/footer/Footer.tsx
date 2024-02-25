@@ -9,7 +9,7 @@ interface FooterProps {
 }
 
 export const Footer = ({ address, children }: FooterProps) => (
-  <div className="w-full md:w-1/2">
+  <div className="w-full">
     <div className="text-lg sm:text-2xl md:text-3xl lg:text-4xl">
       <Caption>CONTACT:</Caption>
       <a
@@ -20,6 +20,6 @@ export const Footer = ({ address, children }: FooterProps) => (
         {address}
       </a>
     </div>
-    <div className="flex">{children}</div>
+    {children}
   </div>
 );
