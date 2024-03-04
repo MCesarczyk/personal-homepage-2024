@@ -21,7 +21,7 @@ const config: Config = {
         },
       },
       animation: {
-        slideDown: "slideDown 0.2s linear",
+        slideDown: "slideDown 0.5s ease-out",
       },
     },
   },
