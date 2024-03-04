@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/MCesarczyk/personal-homepage-2024/compare/v1.1.0...v1.2.0) (2024-03-04)
+
+### Features
+
+- add cv available to download in pdf ([#12](https://github.com/MCesarczyk/personal-homepage-2024/issues/12)) ([a5e90ac](https://github.com/MCesarczyk/personal-homepage-2024/commit/a5e90ac4197a013d6e346c2d58515fa0049a8396))
+- update opengraph etc ([2ae283a](https://github.com/MCesarczyk/personal-homepage-2024/pull/15/commits/9d5e9f84b7019f687ceca0622341388e38a78153))
+- enable saving preferred theme to local storage ([89fe474](https://github.com/MCesarczyk/personal-homepage-2024/pull/15/commits/89fe4742e24aa0aadb1b5d6fbc335d189dc9a6bb))
+
 ## [1.1.0](https://github.com/MCesarczyk/personal-homepage-2024/compare/v1.0.0...v1.1.0) (2024-02-23)
 
 ### Features
