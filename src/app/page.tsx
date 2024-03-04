@@ -17,7 +17,7 @@ export default async function Index() {
       <Header
         name={AUTHOR_NAME}
         description={AUTHOR_DESCRIPTION}
-        Portrait={<Image src={portrait} priority alt="portrait" width={384} height={512} />}
+        Portrait={<Image src={portrait} priority alt="portrait" height={384} />}
       />
       <Section title={"My skills"} elements={skills} />
       <Section title={"Things I'm learning right now"} elements={learning} />
