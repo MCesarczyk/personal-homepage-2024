@@ -16,5 +16,9 @@ export default function NextThemeSwitcher() {
     isDarkTheme ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
   }, [isDarkTheme]);
 
-  return <ThemeSwitcher {...{ isDarkTheme, toggleDarkTheme: onThemeChange }} />;
+  return (
+    <div className="animate-slideDown">
+      <ThemeSwitcher {...{ isDarkTheme, toggleDarkTheme: onThemeChange }} />
+    </div>
+  );
 }
