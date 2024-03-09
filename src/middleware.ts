@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 // eslint-disable-next-line import/no-default-export
 export default async function middleware(req: NextRequest) {
-  const accessToken = req.cookies.get("access_token")?.value;
+  const accessToken = req.cookies.get("accessToken")?.value;
   const { pathname } = req.nextUrl;
 
   const protectedRoutes = ["/admin"];
@@ -16,14 +16,12 @@ export default async function middleware(req: NextRequest) {
     credentials: "include",
   });
 
-  console.log(response.status, accessToken);
-
   if (response.status === 401 && protectedRoutes.includes(pathname)) {
-    req.cookies.delete("access_token");
+    req.cookies.delete("accessToken");
 
     const response = NextResponse.redirect(new URL("/login", req.url));
 
-    response.cookies.delete("access_token");
+    response.cookies.delete("accessToken");
 
     return response;
   }

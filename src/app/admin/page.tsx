@@ -1,8 +1,9 @@
 import { cookies } from "next/headers";
 import { PageTitle } from "@/ui";
+import { Topbar } from "@/app/admin/Topbar";
 
 export default async function Admin() {
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("accessToken")?.value;
 
   const user = await fetch(`${process.env.API_URL}${process.env.API_PREFIX}/user/profile`, {
     method: "GET",
@@ -16,6 +17,7 @@ export default async function Admin() {
 
   return (
     <>
+      <Topbar />
       <PageTitle>Admin panel</PageTitle>
       <p>Welcome, {data.name}!</p>
     </>
