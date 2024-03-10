@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
+import * as jwt from "jsonwebtoken";
 
 import { Button } from "@/ui";
 
@@ -10,6 +11,7 @@ export const Topbar = () => {
   const accessToken = Cookies.get("accessToken");
   const router = useRouter();
   const [username, setUsername] = useState("");
+  const [tokenExpires, setTokenExpires] = useState<number | undefined>();
 
   const getUserData = async () => {
     const user = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${process.env.NEXT_PUBLIC_API_PREFIX}/user/profile`, {
@@ -40,7 +42,17 @@ export const Topbar = () => {
 
     const data = await response.json();
 
-    console.log(data.accessToken);
+    const newAccessToken = data.accessToken;
+
+    Cookies.set("accessToken", newAccessToken);
+
+    const decodedToken: string | jwt.JwtPayload | null = jwt.decode(newAccessToken as unknown as string);
+
+    if (decodedToken && typeof decodedToken !== "string" && decodedToken.exp) {
+      setTokenExpires(new Date(new Date(decodedToken.exp * 1000).getTime() - Date.now() - 60 * 1000).getTime());
+    }
+
+    console.log(newAccessToken);
   };
 
   const logout = async () => {
@@ -65,6 +77,14 @@ export const Topbar = () => {
   useEffect(() => {
     getUserData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    const refreshTimeout = setTimeout(() => {
+      refreshToken();
+    }, tokenExpires);
+
+    return () => clearTimeout(refreshTimeout);
+  }, [accessToken, tokenExpires]);
 
   return (
     <div className="w-2/3 md:w-1/2 mt-[-48px] mb-16 mr-auto flex flex-col sm:flex-row items-center gap-6 z-20">
