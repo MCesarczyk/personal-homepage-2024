@@ -6,8 +6,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-- add cv available to download in pdf ([#12](https://github.com/MCesarczyk/personal-homepage-2024/issues/12)) ([a5e90ac](https://github.com/MCesarczyk/personal-homepage-2024/commit/a5e90ac4197a013d6e346c2d58515fa0049a8396))
 - create admin subpage ([#18](https://github.com/MCesarczyk/personal-homepage-2024/issues/18)) ([06e5b5d](https://github.com/MCesarczyk/personal-homepage-2024/commit/06e5b5dda790cb90d39677c6e34ad895be26f182))
+- create token refresh method ([60942f8](https://github.com/MCesarczyk/personal-homepage-2024/pull/18/commits/60942f8b0394431e00607aaede471dfd07ea1ca4))
+- update theme management ([3203768](https://github.com/MCesarczyk/personal-homepage-2024/pull/18/commits/320376884176c7598ee6ed8a3b57c10b3cc7e7b2))
 
 ## [1.2.0](https://github.com/MCesarczyk/personal-homepage-2024/compare/v1.1.0...v1.2.0) (2024-03-04)
 
