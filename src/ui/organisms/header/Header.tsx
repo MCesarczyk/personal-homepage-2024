@@ -10,7 +10,7 @@ interface HeaderProps {
 }
 
 export const Header = ({ name, description, Portrait }: HeaderProps) => (
-  <header className="grid grid-cols-1 gap-0 md:grid-cols-[auto_1fr] items-center md:gap-16 mt-[-30px]">
+  <header className="grid grid-cols-1 gap-0 md:grid-cols-[auto_1fr] items-center md:gap-16">
     <div>{Portrait}</div>
     <div>
       <Caption>THIS IS:</Caption>

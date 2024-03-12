@@ -15,7 +15,7 @@ export const LoginForm = () => {
   const handleLogin = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    console.log(`Logging in as ${email} with password ${password} to ${process.env.API_URL}`);
+    console.log(`Logging in as ${email} with password ${password} to ${process.env.NEXT_PUBLIC_API_URL}`);
 
     const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}${process.env.NEXT_PUBLIC_API_PREFIX}/auth/login`, {
       method: "POST",
