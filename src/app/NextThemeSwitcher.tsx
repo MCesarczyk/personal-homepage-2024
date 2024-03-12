@@ -1,24 +1,29 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
+import { useTheme } from "next-themes";
 import { ThemeSwitcher } from "@/ui";
-import { useLocalStorage } from "@/app/useLocalStorage";
 
 export type Theme = "light" | "dark";
 
 export default function NextThemeSwitcher() {
-  const [isDarkTheme, setDarkTheme] = useLocalStorage("theme", "light" as Theme);
-
-  const onThemeChange = () => setDarkTheme(!isDarkTheme);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    isDarkTheme ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
-  }, [isDarkTheme]);
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  const onThemeChange = () => setTheme(theme === "dark" ? "light" : "dark");
 
   return (
-    <div className="animate-slideDown">
-      <ThemeSwitcher {...{ isDarkTheme, toggleDarkTheme: onThemeChange }} />
+    <div className="relative mb-[-32px] animate-slideDown">
+      <ThemeSwitcher {...{ isDarkTheme: theme === "dark", toggleDarkTheme: onThemeChange }} />
     </div>
   );
 }

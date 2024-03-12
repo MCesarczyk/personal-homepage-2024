@@ -1,19 +1,12 @@
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import { Header, Section, Footer, footerThumbnails, Gallery } from "@/ui";
 
 import { ADDRESS, AUTHOR_DESCRIPTION, AUTHOR_NAME, skills, learning, goals, portrait } from "@/assets";
 import { sampleRepositories } from "@/app/repositories";
 
-const ThemeSwitcher = dynamic(() => import("./NextThemeSwitcher"), { ssr: false });
-
 export default async function Index() {
   return (
-    <div
-      id="home"
-      className="h-full py-12 px-2 md:px-4 max-w-5xl my-0 mx-auto bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100"
-    >
-      <ThemeSwitcher />
+    <div id="home">
       <Header
         name={AUTHOR_NAME}
         description={AUTHOR_DESCRIPTION}

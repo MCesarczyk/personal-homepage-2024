@@ -30,7 +30,9 @@ const Template: StoryFn<ComponentProps<typeof ThemeSwitcher>> = (args) => {
         "h-full w-full flex items-center justify-center p-6",
       )}
     >
-      <ThemeSwitcher {...args} {...{ isDarkTheme, toggleDarkTheme }} />
+      <div className="mb-[-48px]">
+        <ThemeSwitcher {...args} {...{ isDarkTheme, toggleDarkTheme }} />
+      </div>
     </div>
   );
 };
