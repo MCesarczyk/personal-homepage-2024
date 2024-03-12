@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/MCesarczyk/personal-homepage-2024/compare/v1.1.0...v1.3.0) (2024-03-12)
+
+### Features
+
+- add cv available to download in pdf ([#12](https://github.com/MCesarczyk/personal-homepage-2024/issues/12)) ([a5e90ac](https://github.com/MCesarczyk/personal-homepage-2024/commit/a5e90ac4197a013d6e346c2d58515fa0049a8396))
+- create admin subpage ([#18](https://github.com/MCesarczyk/personal-homepage-2024/issues/18)) ([06e5b5d](https://github.com/MCesarczyk/personal-homepage-2024/commit/06e5b5dda790cb90d39677c6e34ad895be26f182))
+
 ## [1.2.0](https://github.com/MCesarczyk/personal-homepage-2024/compare/v1.1.0...v1.2.0) (2024-03-04)
 
 ### Features
