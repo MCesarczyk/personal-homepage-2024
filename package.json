@@ -26,7 +26,8 @@
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "save-file": "^2.3.1"
+    "save-file": "^2.3.1",
+    "utils-agnostic": "^1.0.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.17",
