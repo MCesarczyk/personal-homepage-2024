@@ -11,7 +11,11 @@ type Props = {
 
 export const Select = ({ options, ...rest }: ComponentProps<"select"> & Props) => {
   return (
-    <select className="px-4 py-2 rounded bg-gray-200 border-black border-2 outline-offset-0" {...{ options }} {...rest}>
+    <select
+      className="px-4 py-2 rounded text-black bg-slate-300 border-black border-2 outline-offset-0"
+      {...{ options }}
+      {...rest}
+    >
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}

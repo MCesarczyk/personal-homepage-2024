@@ -19,7 +19,7 @@ export const Link = ({ variant, children, href, current }: ComponentProps<"a"> &
   <a
     {...{ href }}
     className={clsx(
-      "inline-flex items-center text-sm sm:text-base md:text-lg lg:text-xl",
+      "inline-flex items-center text-sm sm:text-base md:text-lg lg:text-xl cursor-pointer",
       linkStyles[variant ?? "PRIMARY"],
       current
         ? "text-red-800 hover:text-red-500 active:text-red-500 dark:text-red-500 dark:hover:text-red-300 dark:active:text-red-300 font-medium border-red-500 border-b-2"
