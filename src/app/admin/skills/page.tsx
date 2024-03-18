@@ -1,10 +1,13 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import * as jwt from "jsonwebtoken";
 
 import { type SkillDto } from "@/app/admin/skills/types";
 
 export default async function SkillsPage() {
   const accessToken = cookies().get("accessToken")?.value;
+
+  const currentUserId = (jwt.decode(accessToken as string) as jwt.JwtPayload)?.id;
 
   const response = await fetch(`${process.env.API_URL}${process.env.API_PREFIX}/skill`, {
     method: "GET",
@@ -24,12 +27,14 @@ export default async function SkillsPage() {
   return (
     <div className="py-8">
       <ul>
-        {skills?.map(({ id, content, state }) => (
-          <li key={id}>
-            <a href={`/admin/skills/${id}`}>{content}</a>
-            <span>State: {state}</span>
-          </li>
-        ))}
+        {skills
+          ?.filter(({ userId }) => userId === currentUserId)
+          .map(({ id, content, state }) => (
+            <li key={id}>
+              <a href={`/admin/skills/${id}`}>{content}</a>
+              <span>State: {state}</span>
+            </li>
+          ))}
       </ul>
     </div>
   );
