@@ -3,6 +3,8 @@ import { redirect } from "next/navigation";
 import * as jwt from "jsonwebtoken";
 
 import { type SkillDto } from "@/app/admin/skills/types";
+import { Card } from "@/ui/molecules/card";
+import { sortArrayOfSkillsDescending } from "@/app/admin/skills/helpers";
 
 export default async function SkillsPage() {
   const accessToken = cookies().get("accessToken")?.value;
@@ -26,13 +28,13 @@ export default async function SkillsPage() {
 
   return (
     <div className="py-8">
-      <ul>
+      <ul className="flex flex-col gap-4">
         {skills
           ?.filter(({ userId }) => userId === currentUserId)
+          .sort(sortArrayOfSkillsDescending)
           .map(({ id, content, state }) => (
             <li key={id}>
-              <a href={`/admin/skills/${id}`}>{content}</a>
-              <span>State: {state}</span>
+              <Card content={content} state={state} />
             </li>
           ))}
       </ul>
