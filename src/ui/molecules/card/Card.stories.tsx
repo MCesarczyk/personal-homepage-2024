@@ -11,6 +11,9 @@ const meta: Meta<typeof Card> = {
   argTypes: {
     content: { control: "text", description: "Content" },
     state: { control: "text", description: "State" },
+    changeState: { action: "changed", description: "State change event" },
+    editSkill: { action: "edit", description: "Edit event" },
+    deleteSkill: { action: "delete", description: "Delete event" },
   },
 };
 export default meta;

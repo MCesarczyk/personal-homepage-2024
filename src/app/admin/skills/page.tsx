@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import * as jwt from "jsonwebtoken";
 import { sortArrayOfObjects } from "utils-agnostic";
 
-import { type SkillDto } from "@/app/admin/skills/types";
+import { type SkillState, type SkillDto } from "@/app/admin/skills/types";
 import { Card } from "@/ui/molecules/card";
 
 export default async function SkillsPage() {
@@ -26,6 +26,24 @@ export default async function SkillsPage() {
 
   const skills: SkillDto[] = (await response.json()) || [];
 
+  const handleChangeState = async (state: SkillState) => {
+    "use server";
+
+    console.log(state);
+  };
+
+  const handleEdit = async (id: string) => {
+    "use server";
+
+    console.log(id);
+  };
+
+  const handleDelete = async (id: string) => {
+    "use server";
+
+    console.log(id);
+  };
+
   return (
     <div className="py-8">
       <ul className="flex flex-col gap-4">
@@ -33,7 +51,14 @@ export default async function SkillsPage() {
           ?.filter(({ userId }) => userId === currentUserId)
           .map(({ id, content, state }) => (
             <li key={id}>
-              <Card content={content} state={state} />
+              <Card
+                id={id}
+                changeState={handleChangeState}
+                editSkill={handleEdit}
+                deleteSkill={handleDelete}
+                content={content}
+                state={state}
+              />
             </li>
           ))}
       </ul>

@@ -21,9 +21,13 @@ export const Link = ({ variant, children, href, current }: ComponentProps<"a"> &
     className={clsx(
       "inline-flex items-center text-sm sm:text-base md:text-lg lg:text-xl cursor-pointer",
       linkStyles[variant ?? "PRIMARY"],
-      current
-        ? "text-red-800 hover:text-red-500 active:text-red-500 dark:text-red-500 dark:hover:text-red-300 dark:active:text-red-300 font-medium border-red-500 border-b-2"
-        : "text-blue-800 hover:text-blue-500 active:text-blue-500 dark:text-blue-500 dark:hover:text-blue-300 dark:active:text-blue-300 font-normal border-transparent border-b-2",
+      variant === "PRIMARY"
+        ? current
+          ? "text-red-800 hover:text-red-500 active:text-red-500 dark:text-red-500 dark:hover:text-red-300 dark:active:text-red-300 font-medium"
+          : "text-white"
+        : current
+          ? "text-red-800 hover:text-red-500 active:text-red-500 dark:text-red-500 dark:hover:text-red-300 dark:active:text-red-300 font-medium border-red-500 border-b-2"
+          : "text-blue-800 dark:text-blue-500 font-normal border-transparent border-b-2",
     )}
   >
     {children}
