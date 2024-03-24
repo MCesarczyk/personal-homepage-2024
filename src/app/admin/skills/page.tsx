@@ -27,12 +27,6 @@ export default async function SkillsPage() {
 
   const skills: SkillDto[] = (await response.json()) || [];
 
-  const handleEdit = async (id: string) => {
-    "use server";
-
-    console.log(id, "Skill update");
-  };
-
   const handleDelete = async (id: string) => {
     "use server";
 
@@ -49,7 +43,7 @@ export default async function SkillsPage() {
               <Card
                 id={id}
                 changeState={handleEditSkill}
-                editSkill={handleEdit}
+                editSkill={handleEditSkill}
                 deleteSkill={handleDelete}
                 content={content}
                 state={state}
