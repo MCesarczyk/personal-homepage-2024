@@ -8,13 +8,13 @@ interface CardProps {
   id: string;
   content: string;
   state: SkillState;
-  changeState: (state: SkillState) => void;
+  changeState: (id: string, state: SkillState) => void;
   editSkill: (id: string) => void;
   deleteSkill: (id: string) => void;
 }
 
 export const Card = ({ id, content, state, changeState, editSkill, deleteSkill }: CardProps) => {
-  const handleStateChange = (e: ChangeEvent<HTMLSelectElement>) => changeState(e.target.value as SkillState);
+  const handleStateChange = (e: ChangeEvent<HTMLSelectElement>) => changeState(id, e.target.value as SkillState);
 
   const handleEdit = () => editSkill(id);
 
