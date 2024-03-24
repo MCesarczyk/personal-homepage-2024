@@ -3,9 +3,9 @@ import { redirect } from "next/navigation";
 import * as jwt from "jsonwebtoken";
 import { sortArrayOfObjects } from "utils-agnostic";
 
-import { revalidatePath } from "next/cache";
-import { type SkillState, type SkillDto } from "@/app/admin/skills/types";
+import { type SkillDto } from "@/app/admin/skills/types";
 import { Card } from "@/ui/molecules/card";
+import { handleEditSkill } from "@/app/admin/skills/actions";
 
 export default async function SkillsPage() {
   const accessToken = cookies().get("accessToken")?.value;
@@ -26,25 +26,6 @@ export default async function SkillsPage() {
   }
 
   const skills: SkillDto[] = (await response.json()) || [];
-
-  const handleChangeState = async (id: string, newState: SkillState) => {
-    "use server";
-
-    const response = await fetch(`${process.env.API_URL}${process.env.API_PREFIX}/skill/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken}`,
-      },
-      credentials: "include",
-      body: JSON.stringify({ state: newState }),
-    });
-
-    if (response.ok) {
-      revalidatePath("/admin/skills");
-      console.log(response, "State changed");
-    }
-  };
 
   const handleEdit = async (id: string) => {
     "use server";
@@ -67,7 +48,7 @@ export default async function SkillsPage() {
             <li key={id}>
               <Card
                 id={id}
-                changeState={handleChangeState}
+                changeState={handleEditSkill}
                 editSkill={handleEdit}
                 deleteSkill={handleDelete}
                 content={content}

@@ -1,20 +1,21 @@
 "use client";
 
 import { type ChangeEvent } from "react";
-import { type SkillState } from "@/app/admin/skills/types";
+import { type SkillDto, type SkillState } from "@/app/admin/skills/types";
 import { Select, Button } from "../../atoms";
 
 interface CardProps {
   id: string;
   content: string;
   state: SkillState;
-  changeState: (id: string, state: SkillState) => void;
+  changeState: (id: string, payload: Partial<SkillDto>) => void;
   editSkill: (id: string) => void;
   deleteSkill: (id: string) => void;
 }
 
 export const Card = ({ id, content, state, changeState, editSkill, deleteSkill }: CardProps) => {
-  const handleStateChange = (e: ChangeEvent<HTMLSelectElement>) => changeState(id, e.target.value as SkillState);
+  const handleStateChange = (e: ChangeEvent<HTMLSelectElement>) =>
+    changeState(id, { state: e.target.value as SkillState });
 
   const handleEdit = () => editSkill(id);
 
