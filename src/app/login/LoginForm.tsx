@@ -53,7 +53,9 @@ export const LoginForm = () => {
           name="password"
           placeholder="Password"
         />
-        <Button type="submit">Log in</Button>
+        <Button variant="PRIMARY" type="submit">
+          Log in
+        </Button>
       </form>
     </>
   );
