@@ -5,7 +5,7 @@ import { sortArrayOfObjects } from "utils-agnostic";
 
 import { type SkillDto } from "@/app/admin/skills/types";
 import { Card } from "@/ui/molecules/card";
-import { handleCreateNewSkill, handleEditSkill } from "@/app/admin/skills/actions";
+import { handleCreateNewSkill, handleDeleteSkill, handleEditSkill } from "@/app/admin/skills/actions";
 import { SkillCreateForm } from "@/app/admin/skills/SkillCreateForm";
 
 export default async function SkillsPage() {
@@ -28,12 +28,6 @@ export default async function SkillsPage() {
 
   const skills: SkillDto[] = (await response.json()) || [];
 
-  const handleDelete = async (id: string) => {
-    "use server";
-
-    console.log(id, "Skill delete");
-  };
-
   return (
     <div className="py-8">
       <ul className="flex flex-col gap-4">
@@ -45,7 +39,7 @@ export default async function SkillsPage() {
                 id={id}
                 changeState={handleEditSkill}
                 editSkill={handleEditSkill}
-                deleteSkill={handleDelete}
+                deleteSkill={handleDeleteSkill}
                 content={content}
                 state={state}
               />

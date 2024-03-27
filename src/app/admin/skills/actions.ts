@@ -59,3 +59,26 @@ export const handleEditSkill = async (id: string, payload: Partial<SkillDto>) =>
   revalidatePath("/admin/skills");
   console.log(skillUpdateResponse, "Skill updated");
 };
+
+export const handleDeleteSkill = async (id: string) => {
+  "use server";
+
+  const accessToken = cookies().get("accessToken")?.value;
+
+  const response = await fetch(`${process.env.API_URL}${process.env.API_PREFIX}/skill/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+    credentials: "include",
+  });
+
+  if (!response.ok) {
+    console.log("Error deleting skill");
+  }
+
+  const skillDeleteResponse = await response.json();
+  revalidatePath("/admin/skills");
+  console.log(skillDeleteResponse, "Skill deleted");
+};
