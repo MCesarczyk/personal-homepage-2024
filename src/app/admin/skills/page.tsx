@@ -5,7 +5,8 @@ import { sortArrayOfObjects } from "utils-agnostic";
 
 import { type SkillDto } from "@/app/admin/skills/types";
 import { Card } from "@/ui/molecules/card";
-import { handleEditSkill } from "@/app/admin/skills/actions";
+import { handleCreateNewSkill, handleEditSkill } from "@/app/admin/skills/actions";
+import { SkillCreateForm } from "@/app/admin/skills/SkillCreateForm";
 
 export default async function SkillsPage() {
   const accessToken = cookies().get("accessToken")?.value;
@@ -51,6 +52,7 @@ export default async function SkillsPage() {
             </li>
           ))}
       </ul>
+      <SkillCreateForm handleCreateNewSkill={handleCreateNewSkill} />
     </div>
   );
 }
