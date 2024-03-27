@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import { Button, Input } from "@/ui";
 
 interface SkillCreateFormProps {
@@ -7,6 +8,9 @@ interface SkillCreateFormProps {
 }
 
 export const SkillCreateForm = ({ handleCreateNewSkill }: SkillCreateFormProps) => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -15,14 +19,16 @@ export const SkillCreateForm = ({ handleCreateNewSkill }: SkillCreateFormProps) 
     const content = formData.get("content") as string;
 
     handleCreateNewSkill(content);
+    formRef.current?.reset();
+    inputRef.current?.focus();
   };
 
   return (
-    <form className="my-8 flex gap-8" onSubmit={handleFormSubmit}>
+    <form ref={formRef} className="my-8 flex gap-8" onSubmit={handleFormSubmit}>
       <Button variant="PRIMARY" type="submit">
         Add new
       </Button>
-      <Input name="content" placeholder="Enter new content" />
+      <Input ref={inputRef} name="content" placeholder="Enter new content" />
     </form>
   );
 };
