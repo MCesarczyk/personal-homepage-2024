@@ -21,14 +21,6 @@ export default async function SkillsPage() {
     credentials: "include",
   });
 
-  if (!response.ok) {
-    return (
-      <div className="py-8">
-        <p>Loading...</p>
-      </div>
-    );
-  }
-
   const skills: SkillDto[] = (await response.json()) || [];
 
   return (
