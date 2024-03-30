@@ -1,5 +1,4 @@
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
 import * as jwt from "jsonwebtoken";
 import { sortArrayOfObjects } from "utils-agnostic";
 
@@ -23,7 +22,11 @@ export default async function SkillsPage() {
   });
 
   if (!response.ok) {
-    return redirect("/login");
+    return (
+      <div className="py-8">
+        <p>Loading...</p>;
+      </div>
+    );
   }
 
   const skills: SkillDto[] = (await response.json()) || [];
