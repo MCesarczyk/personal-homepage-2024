@@ -36,7 +36,9 @@ export const Topbar = () => {
     <div className="w-2/3 xs:w-1/2 md:w-1/3 mb-16 mr-auto z-20">
       <div className="flex flex-row items-center gap-6">
         <div className="max-w-40 mt-[-32px]">
-          <Button onClick={logout}>Log out</Button>
+          <Button variant="PRIMARY" onClick={logout}>
+            Log out
+          </Button>
         </div>
         <div className="mt-[-32px]">
           <CurrentUsernameLogger accessToken={accessToken} />

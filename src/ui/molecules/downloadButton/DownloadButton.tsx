@@ -14,7 +14,7 @@ export const DownloadButton = ({ fileLocation, fileName, buttonText }: DownloadB
   const handleClick = () => saveFileFromUrl(fileLocation, fileName);
 
   return (
-    <Button onClick={handleClick}>
+    <Button variant="PRIMARY" onClick={handleClick}>
       <div className="h-5 w-4 mr-2">
         <DownloadIcon />
       </div>
