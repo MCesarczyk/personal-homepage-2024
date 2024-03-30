@@ -22,7 +22,11 @@ export default async function SkillsPage() {
   });
 
   if (!response.ok) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className="py-8">
+        <p>Loading...</p>;
+      </div>
+    );
   }
 
   const skills: SkillDto[] = (await response.json()) || [];
