@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/MCesarczyk/personal-homepage-2024/compare/v1.4.0...v1.4.1) (2024-03-30)
+
+### Bug Fixes
+
+- **skills:** add margin to message ([d316858](https://github.com/MCesarczyk/personal-homepage-2024/commit/d3168581668ae9ba7b3de6a74c0492f97c49540c))
+- **skills:** use loading state instead of redirect ([a82cf56](https://github.com/MCesarczyk/personal-homepage-2024/commit/a82cf56cf92300bbf13d89c7187d64d5ba2f6de9))
+
 ## [1.4.0](https://github.com/MCesarczyk/personal-homepage-2024/compare/v1.1.0...v1.4.0) (2024-03-30)
 
 ### Features
