@@ -24,7 +24,7 @@ export default async function SkillsPage() {
   if (!response.ok) {
     return (
       <div className="py-8">
-        <p>Loading...</p>;
+        <p>Loading...</p>
       </div>
     );
   }
